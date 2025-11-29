@@ -9,9 +9,10 @@ export async function BookShowcase() {
     orderings: [{ field: "my.book.title", direction: "asc" }],
   });
 
-  const primaryBooks = books.filter((book: any) => book.data.category === "primary");
-  const juniorHighBooks = books.filter((book: any) => book.data.category === "junior-high");
-  const seniorHighBooks = books.filter((book: any) => book.data.category === "senior-high");
+  // Filter books by tags instead of category field since that's where the data is
+  const primaryBooks = books.filter((book: any) => book.tags?.includes("primary"));
+  const juniorHighBooks = books.filter((book: any) => book.tags?.includes("junior-high"));
+  const seniorHighBooks = books.filter((book: any) => book.tags?.includes("senior-high"));
 
   return (
     <section className="py-16 bg-gray-50">
