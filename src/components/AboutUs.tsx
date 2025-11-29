@@ -28,7 +28,6 @@ export function AboutUs() {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut",
       },
     },
   }
@@ -105,7 +104,7 @@ export function AboutUs() {
               {/* Floating statistics */}
               <motion.div
                 animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                transition={{ duration: 3, repeat: Infinity }}
                 className="absolute -top-4 -right-4 bg-white rounded-lg shadow-lg p-4"
               >
                 <div className="text-2xl font-bold text-blue-600">110+</div>
@@ -114,7 +113,7 @@ export function AboutUs() {
 
               <motion.div
                 animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                transition={{ duration: 4, repeat: Infinity, delay: 1 }}
                 className="absolute -bottom-4 -left-4 bg-white rounded-lg shadow-lg p-4"
               >
                 <div className="text-2xl font-bold text-green-600">5+</div>

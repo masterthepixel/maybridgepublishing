@@ -21,7 +21,7 @@ export function EnhancedHero() {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.8 }}
             className="text-center lg:text-left space-y-8"
           >
             <motion.div
@@ -159,7 +159,6 @@ export function EnhancedHero() {
               transition={{ 
                 duration: 6,
                 repeat: Infinity,
-                ease: "easeInOut"
               }}
               className="absolute top-10 right-10 w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center text-2xl shadow-lg"
             >
@@ -174,7 +173,6 @@ export function EnhancedHero() {
               transition={{ 
                 duration: 5,
                 repeat: Infinity,
-                ease: "easeInOut",
                 delay: 1
               }}
               className="absolute bottom-20 left-10 w-12 h-12 bg-green-400 rounded-full flex items-center justify-center text-xl shadow-lg"
