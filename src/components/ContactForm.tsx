@@ -76,7 +76,7 @@ export function ContactForm() {
   }
 
   return (
-    <section id="contact" ref={ref} className="py-20 bg-gray-50">
+    <section id="contact" ref={ref} className="py-20 bg-zinc-50">
       <Bounded>
         <motion.div
           variants={containerVariants}
@@ -267,7 +267,7 @@ export function ContactForm() {
                   whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
                   className={`w-full py-4 px-6 rounded-lg font-semibold text-white transition-colors ${
                     isSubmitting
-                      ? 'bg-gray-400 cursor-not-allowed'
+                      ? 'bg-zinc-400 cursor-not-allowed'
                       : 'bg-blue-600 hover:bg-blue-700'
                   }`}
                 >

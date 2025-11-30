@@ -85,7 +85,7 @@ export async function SeniorHighBooksSection() {
                           .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
                           .join(' ')}
                       </p>
-                      <span className="inline-block bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full mt-1">
+                      <span className="inline-block bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full mt-0.5">
                         Senior High
                       </span>
                     </div>

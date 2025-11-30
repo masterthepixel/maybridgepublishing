@@ -206,7 +206,7 @@ export default async function BookPage({ params }: { params: Promise<Params> }) 
                   {bookData.tags.map((tagItem, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 text-xs bg-gray-100 text-zinc-700 rounded-full"
+                      className="px-3 py-1 text-xs bg-zinc-100 text-zinc-700 rounded-full"
                     >
                       {tagItem.tag}
                     </span>
@@ -281,7 +281,7 @@ export default async function BookPage({ params }: { params: Promise<Params> }) 
       {/* Editor Notes */}
       {bookData.editor_notes && (
         <Bounded>
-          <div className="mb-16 bg-gray-50 p-8 rounded-lg">
+          <div className="mb-16 bg-zinc-50 p-8 rounded-lg">
             <Heading as="h2" size="lg" className="mb-6">
               Editor's Notes
             </Heading>

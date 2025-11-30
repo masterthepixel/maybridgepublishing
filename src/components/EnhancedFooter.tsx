@@ -35,7 +35,7 @@ export function EnhancedFooter() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer ref={ref} className="bg-gray-900 text-white">
+    <footer ref={ref} className="bg-zinc-900 text-white">
       <Bounded>
         <motion.div
           variants={containerVariants}

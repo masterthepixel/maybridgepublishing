@@ -27,7 +27,7 @@ const TextWithImage: FC<TextWithImageProps> = ({ slice }) => {
         </div>
         <div>
           {isFilled.image(image) && (
-            <div className="bg-gray-100">
+            <div className="bg-zinc-100">
               <PrismicNextImage
                 field={image}
                 sizes="100vw"

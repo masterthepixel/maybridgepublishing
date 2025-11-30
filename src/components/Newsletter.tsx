@@ -166,10 +166,10 @@ export function Newsletter() {
                   whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
                   className={`w-full py-4 px-6 rounded-lg font-semibold transition-colors ${
                     isSubmitting
-                      ? 'bg-gray-400 text-zinc-700 cursor-not-allowed'
+                      ? 'bg-zinc-400 text-zinc-700 cursor-not-allowed'
                       : submitStatus === 'success'
                       ? 'bg-green-500 text-white cursor-default'
-                      : 'bg-white text-blue-600 hover:bg-gray-100'
+                      : 'bg-white text-blue-600 hover:bg-zinc-100'
                   }`}
                 >
                   {isSubmitting ? (

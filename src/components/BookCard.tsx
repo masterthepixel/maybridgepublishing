@@ -54,7 +54,7 @@ export function BookCard({ book }: BookCardProps) {
   return (
     <div className="relative flex flex-col text-zinc-700 bg-white shadow-md bg-clip-border rounded-xl w-full max-w-sm mx-auto">
       {/* 3D Book Image Area */}
-      <div className="relative mx-4 mt-4 overflow-visible text-zinc-700 bg-gray-50 bg-clip-border rounded-xl min-h-[300px] flex items-center justify-center p-4">
+      <div className="relative mx-4 mt-4 overflow-visible text-zinc-700 bg-zinc-50 bg-clip-border rounded-xl min-h-[300px] flex items-center justify-center p-4">
         <div onClick={handleBookClick} className="cursor-pointer">
           <Book 
             size="lg" 

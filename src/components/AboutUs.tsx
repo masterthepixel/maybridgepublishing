@@ -153,7 +153,7 @@ export function AboutUs() {
                     scale: 1.05,
                     boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)"
                   }}
-                  className="text-center p-6 bg-gray-50 rounded-xl transition-all duration-300"
+                  className="text-center p-6 bg-zinc-50 rounded-xl transition-all duration-300"
                 >
                   <div className="text-4xl mb-4">{value.icon}</div>
                   <h4 className="text-xl font-semibold mb-3 text-zinc-800">{value.title}</h4>
@@ -176,7 +176,7 @@ export function AboutUs() {
               href="#books"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors shadow-lg"
+              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-zinc-100 transition-colors shadow-lg"
             >
               Browse Our Books
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

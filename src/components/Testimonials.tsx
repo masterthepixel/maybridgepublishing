@@ -203,7 +203,7 @@ export function Testimonials() {
                         setIsAutoPlaying(false)
                       }}
                       className={`w-3 h-3 rounded-full transition-colors ${
-                        index === currentIndex ? 'bg-blue-600' : 'bg-gray-300'
+                        index === currentIndex ? 'bg-blue-600' : 'bg-zinc-300'
                       }`}
                       aria-label={`View testimonial ${index + 1}`}
                     />
