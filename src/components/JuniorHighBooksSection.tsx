@@ -52,6 +52,7 @@ export async function JuniorHighBooksSection() {
                   <Book 
                     size="lg" 
                     className=""
+                    image={book.data.cover_image?.url}
                     color="blue"
                   >
                     <BookTitle className="text-white text-lg font-bold leading-tight">

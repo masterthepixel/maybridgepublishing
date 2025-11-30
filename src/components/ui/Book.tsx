@@ -43,6 +43,7 @@ interface BookProps {
   radius?: "sm" | "md" | "lg";
   size?: "sm" | "md" | "lg";
   color?: keyof typeof colorMap;
+  image?: string;
   isStatic?: boolean;
   className?: string;
   children: React.ReactNode;
@@ -52,6 +53,7 @@ const Book: React.FC<BookProps> = ({
   radius = "sm",
   size = "md",
   color = "zinc",
+  image,
   isStatic = false,
   className = "",
   children,
@@ -75,10 +77,15 @@ const Book: React.FC<BookProps> = ({
       >
         {/* Front Side */}
         <div
-          className={`absolute inset-y-0 overflow-hidden size-full left-0 text-white flex flex-col justify-start p-6 bg-gradient-to-tr ${gradient.from} ${gradient.to} ${radiusMap[radius]}`}
+          className={`absolute inset-y-0 overflow-hidden size-full left-0 text-white flex flex-col justify-start p-6 ${radiusMap[radius]}`}
           style={{
             transform: "translateZ(25px)",
             boxShadow: "5px 5px 20px var(--shadowColor)",
+            background: image 
+              ? `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${image})`
+              : `linear-gradient(to top right, ${gradient.from.replace('from-', '')}, ${gradient.to.replace('to-', '')})`,
+            backgroundSize: image ? 'cover' : undefined,
+            backgroundPosition: image ? 'center' : undefined,
           }}
         >
           <div
@@ -110,10 +117,15 @@ const Book: React.FC<BookProps> = ({
 
         {/* Back Side */}
         <div
-          className={`absolute inset-y-0 overflow-hidden size-full left-0 text-white flex flex-col justify-start p-6 bg-gradient-to-tr ${gradient.from} ${gradient.to} ${radiusMap[radius]}`}
+          className={`absolute inset-y-0 overflow-hidden size-full left-0 text-white flex flex-col justify-start p-6 ${radiusMap[radius]}`}
           style={{
             transform: "translateZ(-25px)",
             boxShadow: "-10px 0 50px 10px var(--shadowColor)",
+            background: image 
+              ? `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${image})`
+              : `linear-gradient(to top right, ${gradient.from.replace('from-', '')}, ${gradient.to.replace('to-', '')})`,
+            backgroundSize: image ? 'cover' : undefined,
+            backgroundPosition: image ? 'center' : undefined,
           }}
         ></div>
       </div>
