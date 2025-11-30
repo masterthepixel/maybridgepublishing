@@ -40,7 +40,7 @@ async function Header() {
           href="/"
           className="text-xl font-semibold tracking-tight"
         >
-          <PrismicText field={settings.data.siteTitle} />
+          Maybridge Publishing
         </PrismicNextLink>
         <nav>
           <ul className="flex flex-wrap gap-6 md:gap-10">
