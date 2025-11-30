@@ -68,9 +68,17 @@ export async function JuniorHighBooksSection() {
               {/* Card Content */}
               <div className="p-6">
                 <div className="flex items-center justify-between mb-2">
-                  <p className="block font-sans text-base antialiased font-bold leading-relaxed text-blue-gray-900">
-                    Junior High
-                  </p>
+                  <div>
+                    <p className="block font-sans text-base antialiased font-bold leading-relaxed text-blue-gray-900">
+                      {(book.uid || 'untitled')
+                        .split('-')
+                        .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
+                        .join(' ')}
+                    </p>
+                    <span className="inline-block bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full mt-1">
+                      Junior High
+                    </span>
+                  </div>
                   <div className="flex items-center gap-2">
                     <div className="bg-green-500 p-1.5 rounded-full">
                       <ShoppingCart size={14} className="text-white" />
