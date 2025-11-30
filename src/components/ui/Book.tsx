@@ -178,7 +178,7 @@ export function BookButton({ children, onClick, variant = 'primary', className =
   const baseClasses = "w-full text-sm font-medium py-2 px-4 rounded transition-colors duration-200";
   const variantClasses = {
     primary: "bg-blue-600 text-white hover:bg-blue-700",
-    secondary: "bg-gray-200 text-gray-800 hover:bg-gray-300"
+    secondary: "bg-gray-200 text-zinc-800 hover:bg-gray-300"
   };
 
   return (

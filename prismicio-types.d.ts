@@ -182,10 +182,235 @@ export type SettingsDocument<Lang extends string = string> =
     Lang
   >;
 
+/**
+ * Item in *Book → Gallery*
+ */
+export interface BookDocumentDataGalleryItem {
+  /**
+   * Image field in *Book → Gallery*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book.gallery[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Caption field in *Book → Gallery*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book.gallery[].caption
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  caption: prismic.KeyTextField;
+}
+
+/**
+ * Item in *Book → Tags*
+ */
+export interface BookDocumentDataTagsItem {
+  /**
+   * Tag field in *Book → Tags*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book.tags[].tag
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  tag: prismic.KeyTextField;
+}
+
+/**
+ * Item in *Book → Reviews*
+ */
+export interface BookDocumentDataReviewsItem {
+  /**
+   * Reviewer Name field in *Book → Reviews*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book.reviews[].reviewer_name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  reviewer_name: prismic.KeyTextField;
+
+  /**
+   * Rating field in *Book → Reviews*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book.reviews[].rating
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  rating: prismic.NumberField;
+
+  /**
+   * Comment field in *Book → Reviews*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book.reviews[].comment
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  comment: prismic.RichTextField;
+}
+
+/**
+ * Content for Book documents
+ */
+interface BookDocumentData {
+  /**
+   * Title field in *Book*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Author field in *Book*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book.author
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  author: prismic.KeyTextField;
+
+  /**
+   * ISBN field in *Book*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book.isbn
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  isbn: prismic.KeyTextField;
+
+  /**
+   * Description field in *Book*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book.description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Excerpt field in *Book*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book.excerpt
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  excerpt: prismic.RichTextField;
+
+  /**
+   * Cover Image field in *Book*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book.cover_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  cover_image: prismic.ImageField<never>;
+
+  /**
+   * Gallery field in *Book*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book.gallery[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  gallery: prismic.GroupField<Simplify<BookDocumentDataGalleryItem>>;
+
+  /**
+   * Amazon URL field in *Book*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book.amazon_url
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  amazon_url: prismic.LinkField;
+
+  /**
+   * Category field in *Book*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book.category
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  category: prismic.SelectField<"primary" | "junior-high" | "senior-high">;
+
+  /**
+   * Tags field in *Book*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book.tags[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  tags: prismic.GroupField<Simplify<BookDocumentDataTagsItem>>;
+
+  /**
+   * Editor Notes field in *Book*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book.editor_notes
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  editor_notes: prismic.RichTextField;
+
+  /**
+   * Reviews field in *Book*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book.reviews[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  reviews: prismic.GroupField<Simplify<BookDocumentDataReviewsItem>>;
+}
+
+/**
+ * Book document from Prismic
+ *
+ * - **API ID**: `book`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type BookDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<BookDocumentData>, "book", Lang>;
+
 export type AllDocumentTypes =
   | NavigationDocument
   | PageDocument
-  | SettingsDocument;
+  | SettingsDocument
+  | BookDocument;
 
 /**
  * Primary content in *Hero → Default → Primary*
@@ -684,6 +909,11 @@ declare module "@prismicio/client" {
       PageDocumentDataSlicesSlice,
       SettingsDocument,
       SettingsDocumentData,
+      BookDocument,
+      BookDocumentData,
+      BookDocumentDataGalleryItem,
+      BookDocumentDataTagsItem,
+      BookDocumentDataReviewsItem,
       AllDocumentTypes,
       HeroSlice,
       HeroSliceDefaultPrimary,

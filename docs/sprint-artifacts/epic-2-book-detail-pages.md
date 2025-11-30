@@ -217,7 +217,7 @@ if (bookData.category) {
 **Pattern**: Dynamic breadcrumb generation based on book category
 
 ```typescript
-<nav className="mb-8 text-sm text-gray-600">
+<nav className="mb-8 text-sm text-zinc-600">
   <ol className="flex space-x-2">
     <li><Link href="/">Home</Link></li>
     <li><span className="mx-2">/</span></li>
@@ -227,7 +227,7 @@ if (bookData.category) {
       {getCategoryDisplayName(bookData.category || '')}
     </Link></li>
     <li><span className="mx-2">/</span></li>
-    <li className="text-gray-900 font-medium">{asText(bookData.title)}</li>
+    <li className="text-zinc-900 font-medium">{asText(bookData.title)}</li>
   </ol>
 </nav>
 ```

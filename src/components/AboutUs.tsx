@@ -45,14 +45,14 @@ export function AboutUs() {
             <Heading as="h2" size="xl" className="mb-6">
               About Maybridge Publishing
             </Heading>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-xl text-zinc-600 leading-relaxed">
               Dedicated to empowering education through quality literature and innovative publishing solutions.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <motion.div variants={itemVariants} className="space-y-6">
-              <div className="prose prose-lg text-gray-700">
+              <div className="prose prose-lg text-zinc-700">
                 <p>
                   Founded with a mission to bridge the gap in quality educational content, 
                   Maybridge Publishing USA has been at the forefront of creating engaging, 
@@ -96,8 +96,8 @@ export function AboutUs() {
                   >
                     📚
                   </motion.div>
-                  <h3 className="text-2xl font-bold text-gray-800">Quality Literature</h3>
-                  <p className="text-gray-600">Crafted with care for educational excellence</p>
+                  <h3 className="text-2xl font-bold text-zinc-800">Quality Literature</h3>
+                  <p className="text-zinc-600">Crafted with care for educational excellence</p>
                 </div>
               </div>
 
@@ -108,7 +108,7 @@ export function AboutUs() {
                 className="absolute -top-4 -right-4 bg-white rounded-lg shadow-lg p-4"
               >
                 <div className="text-2xl font-bold text-blue-600">110+</div>
-                <div className="text-sm text-gray-600">Books Published</div>
+                <div className="text-sm text-zinc-600">Books Published</div>
               </motion.div>
 
               <motion.div
@@ -117,7 +117,7 @@ export function AboutUs() {
                 className="absolute -bottom-4 -left-4 bg-white rounded-lg shadow-lg p-4"
               >
                 <div className="text-2xl font-bold text-green-600">5+</div>
-                <div className="text-sm text-gray-600">Years Experience</div>
+                <div className="text-sm text-zinc-600">Years Experience</div>
               </motion.div>
             </motion.div>
           </div>
@@ -156,8 +156,8 @@ export function AboutUs() {
                   className="text-center p-6 bg-gray-50 rounded-xl transition-all duration-300"
                 >
                   <div className="text-4xl mb-4">{value.icon}</div>
-                  <h4 className="text-xl font-semibold mb-3 text-gray-800">{value.title}</h4>
-                  <p className="text-gray-600 leading-relaxed">{value.description}</p>
+                  <h4 className="text-xl font-semibold mb-3 text-zinc-800">{value.title}</h4>
+                  <p className="text-zinc-600 leading-relaxed">{value.description}</p>
                 </motion.div>
               ))}
             </div>

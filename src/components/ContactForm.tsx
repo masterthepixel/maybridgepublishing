@@ -88,7 +88,7 @@ export function ContactForm() {
             <Heading as="h2" size="xl" className="mb-6">
               Get In Touch
             </Heading>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-xl text-zinc-600 leading-relaxed">
               Have questions about our books or need educational publishing guidance? 
               We'd love to hear from you.
             </p>
@@ -98,10 +98,10 @@ export function ContactForm() {
             {/* Contact Information */}
             <motion.div variants={itemVariants} className="space-y-8">
               <div>
-                <h3 className="text-2xl font-semibold mb-6 text-gray-800">
+                <h3 className="text-2xl font-semibold mb-6 text-zinc-800">
                   Let's Start a Conversation
                 </h3>
-                <p className="text-gray-600 mb-8">
+                <p className="text-zinc-600 mb-8">
                   Whether you're an educator, parent, or student, we're here to help you 
                   find the perfect books for your educational journey.
                 </p>
@@ -119,8 +119,8 @@ export function ContactForm() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800">Email Us</h4>
-                    <p className="text-gray-600">info@maybridgepublishing.com</p>
+                    <h4 className="font-semibold text-zinc-800">Email Us</h4>
+                    <p className="text-zinc-600">info@maybridgepublishing.com</p>
                   </div>
                 </motion.div>
 
@@ -134,8 +134,8 @@ export function ContactForm() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800">Call Us</h4>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                    <h4 className="font-semibold text-zinc-800">Call Us</h4>
+                    <p className="text-zinc-600">+1 (555) 123-4567</p>
                   </div>
                 </motion.div>
 
@@ -150,8 +150,8 @@ export function ContactForm() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800">Visit Us</h4>
-                    <p className="text-gray-600">New York, NY, USA</p>
+                    <h4 className="font-semibold text-zinc-800">Visit Us</h4>
+                    <p className="text-zinc-600">New York, NY, USA</p>
                   </div>
                 </motion.div>
               </div>
@@ -173,7 +173,7 @@ export function ContactForm() {
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 {/* Name field */}
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-zinc-700 mb-2">
                     Full Name *
                   </label>
                   <input
@@ -192,7 +192,7 @@ export function ContactForm() {
 
                 {/* Email field */}
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-zinc-700 mb-2">
                     Email Address *
                   </label>
                   <input
@@ -217,7 +217,7 @@ export function ContactForm() {
 
                 {/* Subject field */}
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="subject" className="block text-sm font-medium text-zinc-700 mb-2">
                     Subject *
                   </label>
                   <input
@@ -236,7 +236,7 @@ export function ContactForm() {
 
                 {/* Message field */}
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-zinc-700 mb-2">
                     Message *
                   </label>
                   <textarea

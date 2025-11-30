@@ -48,7 +48,7 @@ export function EnhancedFooter() {
             {/* Company info */}
             <motion.div variants={itemVariants}>
               <h3 className="text-xl font-bold mb-4">Maybridge Publishing</h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-zinc-300 mb-6 leading-relaxed">
                 Empowering education through quality books that inspire young minds 
                 and celebrate diverse cultures and perspectives.
               </p>
@@ -56,7 +56,7 @@ export function EnhancedFooter() {
                 <motion.a
                   href="#"
                   whileHover={{ scale: 1.2, color: "#3B82F6" }}
-                  className="text-gray-400 hover:text-blue-400 transition-colors"
+                  className="text-zinc-400 hover:text-blue-400 transition-colors"
                   aria-label="Follow us on Facebook"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -66,7 +66,7 @@ export function EnhancedFooter() {
                 <motion.a
                   href="#"
                   whileHover={{ scale: 1.2, color: "#1DA1F2" }}
-                  className="text-gray-400 hover:text-blue-400 transition-colors"
+                  className="text-zinc-400 hover:text-blue-400 transition-colors"
                   aria-label="Follow us on Twitter"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -76,7 +76,7 @@ export function EnhancedFooter() {
                 <motion.a
                   href="#"
                   whileHover={{ scale: 1.2, color: "#0A66C2" }}
-                  className="text-gray-400 hover:text-blue-400 transition-colors"
+                  className="text-zinc-400 hover:text-blue-400 transition-colors"
                   aria-label="Follow us on LinkedIn"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -86,7 +86,7 @@ export function EnhancedFooter() {
                 <motion.a
                   href="#"
                   whileHover={{ scale: 1.2, color: "#E4405F" }}
-                  className="text-gray-400 hover:text-blue-400 transition-colors"
+                  className="text-zinc-400 hover:text-blue-400 transition-colors"
                   aria-label="Follow us on Instagram"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -114,7 +114,7 @@ export function EnhancedFooter() {
                     >
                       <Link
                         href={link.href}
-                        className="text-gray-300 hover:text-white transition-colors"
+                        className="text-zinc-300 hover:text-white transition-colors"
                       >
                         {link.label}
                       </Link>
@@ -143,7 +143,7 @@ export function EnhancedFooter() {
                     >
                       <Link
                         href={`/books?category=${category.toLowerCase().replace(' ', '-')}`}
-                        className="text-gray-300 hover:text-white transition-colors"
+                        className="text-zinc-300 hover:text-white transition-colors"
                       >
                         {category}
                       </Link>
@@ -162,22 +162,22 @@ export function EnhancedFooter() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                   <div>
-                    <p className="text-gray-300">info@maybridgepublishing.com</p>
-                    <p className="text-gray-300">orders@maybridgepublishing.com</p>
+                    <p className="text-zinc-300">info@maybridgepublishing.com</p>
+                    <p className="text-zinc-300">orders@maybridgepublishing.com</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <svg className="w-5 h-5 mt-0.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  <p className="text-gray-300">(555) 123-4567</p>
+                  <p className="text-zinc-300">(555) 123-4567</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <svg className="w-5 h-5 mt-0.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
-                  <p className="text-gray-300">
+                  <p className="text-zinc-300">
                     123 Education Street<br />
                     Learning City, LC 12345<br />
                     United States
@@ -193,20 +193,20 @@ export function EnhancedFooter() {
             className="mt-12 pt-8 border-t border-gray-700"
           >
             <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-gray-300 text-sm mb-4 md:mb-0">
+              <p className="text-zinc-300 text-sm mb-4 md:mb-0">
                 © {currentYear} Maybridge Publishing. All rights reserved.
               </p>
               <div className="flex space-x-6 text-sm">
-                <Link href="/privacy" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/privacy" className="text-zinc-300 hover:text-white transition-colors">
                   Privacy Policy
                 </Link>
-                <Link href="/terms" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/terms" className="text-zinc-300 hover:text-white transition-colors">
                   Terms of Service
                 </Link>
-                <Link href="/accessibility" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/accessibility" className="text-zinc-300 hover:text-white transition-colors">
                   Accessibility
                 </Link>
-                <Link href="/sitemap" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/sitemap" className="text-zinc-300 hover:text-white transition-colors">
                   Sitemap
                 </Link>
               </div>

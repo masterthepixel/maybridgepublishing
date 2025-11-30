@@ -51,7 +51,7 @@ export function EnhancedHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.6 }}
-              className="text-xl text-gray-600 leading-relaxed mb-8"
+              className="text-xl text-zinc-600 leading-relaxed mb-8"
             >
               Discover our curated collection of 110+ educational books designed to inspire 
               and educate students across Primary, Junior High, and Senior High levels.
@@ -103,15 +103,15 @@ export function EnhancedHero() {
             >
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-600">110+</div>
-                <div className="text-sm text-gray-600">Books Available</div>
+                <div className="text-sm text-zinc-600">Books Available</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-600">3</div>
-                <div className="text-sm text-gray-600">Education Levels</div>
+                <div className="text-sm text-zinc-600">Education Levels</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-600">5+</div>
-                <div className="text-sm text-gray-600">Years Experience</div>
+                <div className="text-sm text-zinc-600">Years Experience</div>
               </div>
             </motion.div>
           </motion.div>
@@ -143,9 +143,9 @@ export function EnhancedHero() {
                 
                 {/* Book details overlay */}
                 <div className="absolute inset-8 bg-white rounded-lg shadow-inner flex flex-col items-center justify-center p-6">
-                  <div className="text-2xl font-bold text-gray-800 mb-2">📚</div>
-                  <div className="text-lg font-semibold text-gray-800 text-center">Educational Excellence</div>
-                  <div className="text-sm text-gray-600 text-center mt-2">Quality Literature for All Levels</div>
+                  <div className="text-2xl font-bold text-zinc-800 mb-2">📚</div>
+                  <div className="text-lg font-semibold text-zinc-800 text-center">Educational Excellence</div>
+                  <div className="text-sm text-zinc-600 text-center mt-2">Quality Literature for All Levels</div>
                 </div>
               </motion.div>
             </div>
@@ -192,7 +192,7 @@ export function EnhancedHero() {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="flex flex-col items-center text-gray-500"
+            className="flex flex-col items-center text-zinc-500"
           >
             <span className="text-sm mb-2">Scroll to explore</span>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -10,7 +10,6 @@ import Link from 'next/link';
 export async function PrimaryBooksSection() {
   const client = createClient();
 
-  // @ts-ignore - Book type will be generated after Slice Machine sync
   const books = await client.getAllByType("book", {
     orderings: [{ field: "my.book.title", direction: "asc" }],
   });
@@ -24,10 +23,10 @@ export async function PrimaryBooksSection() {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:items-center md:gap-8 mb-8">
           <div>
             <div className="max-w-prose md:max-w-none">
-              <h2 className="text-2xl font-semibold text-gray-900 sm:text-3xl">
+              <h2 className="text-2xl font-semibold text-zinc-900 sm:text-3xl">
                 Primary Level Readers
               </h2>
-              <p className="mt-4 text-pretty text-gray-700">
+              <p className="mt-4 text-pretty text-zinc-700">
                 Engaging stories designed for young readers, featuring colorful characters and meaningful lessons. These books help build foundational reading skills while introducing children to the rich culture and traditions of Ghana.
               </p>
             </div>
@@ -38,16 +37,16 @@ export async function PrimaryBooksSection() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
           {primaryBooks.map((book) => (
-            <div key={book.id} className="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-full max-w-sm mx-auto hover:shadow-lg transition-shadow">
+            <div key={book.id} className="relative flex flex-col text-zinc-700 bg-white shadow-md bg-clip-border rounded-xl w-full max-w-sm mx-auto hover:shadow-lg transition-shadow">
               {/* 3D Book Image Area with gradient background */}
-              <div className="relative mx-4 mt-4 overflow-visible text-gray-700 bg-gradient-to-t from-white via-red-200/40 to-red-600/40 bg-clip-border rounded-xl min-h-[300px] flex items-center justify-center p-4" style={{
+              <div className="relative mx-4 mt-4 overflow-visible text-zinc-700 bg-gradient-to-t from-white via-red-200/40 to-red-600/40 bg-clip-border rounded-xl min-h-[300px] flex items-center justify-center p-4" style={{
                 background: 'linear-gradient(to top, #ffffff, rgba(254, 202, 202, 0.4), rgba(220, 38, 38, 0.4))'
               }}>
                 <Link href={`/books/${book.uid || 'untitled'}`} className="block">
                   <Book 
                     size="lg" 
                     className=""
-                    image={book.data.cover_image?.url}
+                    image={book.data.cover_image?.url ?? undefined}
                     color="blue"
                   >
                     <BookTitle className="text-white text-lg font-bold leading-tight">
@@ -75,9 +74,9 @@ export async function PrimaryBooksSection() {
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    {book.data.amazon_url?.url ? (
+                    {(book.data.amazon_url as any)?.url ? (
                       <Link 
-                        href={book.data.amazon_url.url} 
+                        href={(book.data.amazon_url as any).url} 
                         target="_blank" 
                         rel="noopener noreferrer"
                       >
@@ -94,7 +93,7 @@ export async function PrimaryBooksSection() {
                 </div>
                 
                 {/* Description */}
-                <p className="block font-sans text-sm antialiased font-normal leading-normal text-gray-700 opacity-75 mt-4">
+                <p className="block font-sans text-sm antialiased font-normal leading-normal text-zinc-700 opacity-75 mt-4">
                   {bookDescriptions[book.uid || '']?.description || `Discover the captivating world of ${(book.uid || 'this book')
                     .split('-')
                     .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))

@@ -120,7 +120,7 @@ export function Testimonials() {
             <Heading as="h2" size="xl" className="mb-6">
               What Educators Say About Us
             </Heading>
-            <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-zinc-600 leading-relaxed max-w-3xl mx-auto">
               Don't just take our word for it. Here's what teachers, librarians, and parents 
               have to say about our educational books.
             </p>
@@ -142,7 +142,7 @@ export function Testimonials() {
                   <div className="text-6xl text-blue-200 mb-6">"</div>
                   
                   {/* Testimonial content */}
-                  <blockquote className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-8 italic">
+                  <blockquote className="text-xl md:text-2xl text-zinc-700 leading-relaxed mb-8 italic">
                     {currentTestimonial.content}
                   </blockquote>
                   
@@ -154,7 +154,7 @@ export function Testimonials() {
                         className={`w-6 h-6 ${
                           i < currentTestimonial.rating
                             ? 'text-yellow-400'
-                            : 'text-gray-300'
+                            : 'text-zinc-300'
                         }`}
                         fill="currentColor"
                         viewBox="0 0 20 20"
@@ -166,13 +166,13 @@ export function Testimonials() {
                   
                   {/* Author info */}
                   <div className="text-center">
-                    <h4 className="text-xl font-semibold text-gray-800 mb-1">
+                    <h4 className="text-xl font-semibold text-zinc-800 mb-1">
                       {currentTestimonial.name}
                     </h4>
                     <p className="text-blue-600 font-medium mb-1">
                       {currentTestimonial.role}
                     </p>
-                    <p className="text-gray-500">
+                    <p className="text-zinc-500">
                       {currentTestimonial.organization}
                     </p>
                   </div>

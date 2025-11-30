@@ -143,17 +143,17 @@ export default async function BookPage({ params }: { params: Promise<Params> }) 
       
       {/* Breadcrumbs */}
       <Bounded>
-        <nav className="mb-8 text-sm text-gray-600">
+        <nav className="mb-8 text-sm text-zinc-600">
           <ol className="flex space-x-2">
-            <li><Link href="/" className="hover:text-gray-900">Home</Link></li>
+            <li><Link href="/" className="hover:text-zinc-900">Home</Link></li>
             <li><span className="mx-2">/</span></li>
-            <li><Link href="/#books" className="hover:text-gray-900">Books</Link></li>
+            <li><Link href="/#books" className="hover:text-zinc-900">Books</Link></li>
             <li><span className="mx-2">/</span></li>
-            <li><Link href={`/#${bookData.category}`} className="hover:text-gray-900">
+            <li><Link href={`/#${bookData.category}`} className="hover:text-zinc-900">
               {getCategoryDisplayName(bookData.category || '')}
             </Link></li>
             <li><span className="mx-2">/</span></li>
-            <li className="text-gray-900 font-medium">{asText(bookData.title)}</li>
+            <li className="text-zinc-900 font-medium">{asText(bookData.title)}</li>
           </ol>
         </nav>
       </Bounded>
@@ -185,15 +185,15 @@ export default async function BookPage({ params }: { params: Promise<Params> }) 
               <Heading as="h1" className="mb-2">
                 <PrismicRichText field={bookData.title} />
               </Heading>
-              <p className="text-xl text-gray-600 mb-4">by {bookData.author}</p>
+              <p className="text-xl text-zinc-600 mb-4">by {bookData.author}</p>
               {bookData.isbn && (
-                <p className="text-sm text-gray-500">ISBN: {bookData.isbn}</p>
+                <p className="text-sm text-zinc-500">ISBN: {bookData.isbn}</p>
               )}
             </div>
 
             {/* Excerpt */}
             {bookData.excerpt && (
-              <div className="prose prose-lg text-gray-700">
+              <div className="prose prose-lg text-zinc-700">
                 <PrismicRichText field={bookData.excerpt} />
               </div>
             )}
@@ -201,12 +201,12 @@ export default async function BookPage({ params }: { params: Promise<Params> }) 
             {/* Tags */}
             {bookData.tags && bookData.tags.length > 0 && (
               <div>
-                <h3 className="text-sm font-medium text-gray-900 mb-2">Tags</h3>
+                <h3 className="text-sm font-medium text-zinc-900 mb-2">Tags</h3>
                 <div className="flex flex-wrap gap-2">
                   {bookData.tags.map((tagItem, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 text-xs bg-gray-100 text-gray-700 rounded-full"
+                      className="px-3 py-1 text-xs bg-gray-100 text-zinc-700 rounded-full"
                     >
                       {tagItem.tag}
                     </span>
@@ -269,7 +269,7 @@ export default async function BookPage({ params }: { params: Promise<Params> }) 
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   {item.caption && (
-                    <p className="text-sm text-gray-600 text-center">{item.caption}</p>
+                    <p className="text-sm text-zinc-600 text-center">{item.caption}</p>
                   )}
                 </div>
               ))}
@@ -310,7 +310,7 @@ export default async function BookPage({ params }: { params: Promise<Params> }) 
                           className={`w-4 h-4 ${
                             i < (review.rating || 0)
                               ? 'text-yellow-400'
-                              : 'text-gray-300'
+                              : 'text-zinc-300'
                           }`}
                           fill="currentColor"
                           viewBox="0 0 20 20"
@@ -319,7 +319,7 @@ export default async function BookPage({ params }: { params: Promise<Params> }) 
                         </svg>
                       ))}
                     </div>
-                    <span className="ml-2 text-sm text-gray-600">
+                    <span className="ml-2 text-sm text-zinc-600">
                       by {review.reviewer_name}
                     </span>
                   </div>
@@ -362,7 +362,7 @@ export default async function BookPage({ params }: { params: Promise<Params> }) 
                     <h3 className="font-semibold text-lg group-hover:text-blue-600 transition-colors">
                       {asText(relatedBookData.title)}
                     </h3>
-                    <p className="text-gray-600">by {relatedBookData.author}</p>
+                    <p className="text-zinc-600">by {relatedBookData.author}</p>
                   </Link>
                 );
               })}
