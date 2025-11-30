@@ -75,7 +75,7 @@ export async function PrimaryBooksSection() {
                 </div>
                 
                 {/* Description */}
-                <p className="block font-sans text-sm antialiased font-normal leading-normal text-gray-700 opacity-75">
+                <p className="block font-sans text-sm antialiased font-normal leading-normal text-gray-700 opacity-75 mt-4">
                   {bookDescriptions[book.uid || '']?.description || `Discover the captivating world of ${(book.uid || 'this book')
                     .split('-')
                     .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
