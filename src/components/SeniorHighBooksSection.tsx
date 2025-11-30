@@ -75,22 +75,20 @@ export async function SeniorHighBooksSection() {
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="bg-green-500 p-1.5 rounded-full">
-                      <ShoppingCart size={14} className="text-white" />
-                    </div>
                     {book.data.amazon_url?.url ? (
                       <Link 
                         href={book.data.amazon_url.url} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="block font-sans text-base antialiased font-medium leading-relaxed text-blue-600 hover:text-blue-800 transition-colors"
                       >
-                        Buy Now
+                        <div className="bg-green-500 p-1.5 rounded-full cursor-pointer hover:bg-green-600 transition-colors">
+                          <ShoppingCart size={14} className="text-white" />
+                        </div>
                       </Link>
                     ) : (
-                      <p className="block font-sans text-base antialiased font-medium leading-relaxed text-blue-600">
-                        Buy Now
-                      </p>
+                      <div className="bg-green-500 p-1.5 rounded-full">
+                        <ShoppingCart size={14} className="text-white" />
+                      </div>
                     )}
                   </div>
                 </div>
