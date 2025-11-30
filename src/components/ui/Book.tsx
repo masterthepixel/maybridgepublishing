@@ -98,7 +98,7 @@ const Book: React.FC<BookProps> = ({
               opacity: 0.2,
             }}
           ></div>
-          <div className="pl-1">
+          <div className="pl-1" style={{ opacity: image ? 0 : 1 }}>
             {children}
           </div>
         </div>
