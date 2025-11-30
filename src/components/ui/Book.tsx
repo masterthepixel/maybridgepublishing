@@ -86,6 +86,7 @@ const Book: React.FC<BookProps> = ({
               : `linear-gradient(to top right, ${gradient.from.replace('from-', '')}, ${gradient.to.replace('to-', '')})`,
             backgroundSize: image ? 'cover' : undefined,
             backgroundPosition: image ? 'center' : undefined,
+            backgroundColor: image ? '#000000' : undefined,
           }}
         >
           <div
@@ -126,6 +127,7 @@ const Book: React.FC<BookProps> = ({
               : `linear-gradient(to top right, ${gradient.from.replace('from-', '')}, ${gradient.to.replace('to-', '')})`,
             backgroundSize: image ? 'cover' : undefined,
             backgroundPosition: image ? 'center' : undefined,
+            backgroundColor: image ? '#000000' : undefined,
           }}
         ></div>
       </div>
