@@ -85,7 +85,7 @@ export async function PrimaryBooksSection() {
                           .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
                           .join(' ')}
                       </p>
-                      <span className="inline-block bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full mt-0.5">
+                      <span className="inline-block bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full mt-0">
                         Primary Level
                       </span>
                     </div>
