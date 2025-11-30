@@ -63,7 +63,7 @@ export async function PrimaryBooksSection() {
               <div className="p-6">
                 <div className="flex items-center justify-between mb-2">
                   <div>
-                    <p className="block font-sans text-base antialiased font-bold leading-relaxed text-blue-gray-900">
+                    <p className="block font-sans text-2xl antialiased font-bold leading-tight text-blue-gray-900">
                       {(book.uid || 'untitled')
                         .split('-')
                         .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
