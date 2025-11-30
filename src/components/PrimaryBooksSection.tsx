@@ -61,7 +61,18 @@ export async function PrimaryBooksSection() {
               
               {/* Card Content */}
               <div className="p-6">
-                <div className="flex items-center mb-2">
+                <div className="flex items-center justify-between mb-2">
+                  <div>
+                    <p className="block font-sans text-base antialiased font-bold leading-relaxed text-blue-gray-900">
+                      {(book.uid || 'untitled')
+                        .split('-')
+                        .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
+                        .join(' ')}
+                    </p>
+                    <span className="inline-block bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full mt-0">
+                      Primary Level
+                    </span>
+                  </div>
                   <div className="flex items-center gap-2">
                     {(book.data.amazon_url as any)?.url ? (
                       <Link 
@@ -78,17 +89,6 @@ export async function PrimaryBooksSection() {
                         <ShoppingCart size={14} className="text-white" />
                       </div>
                     )}
-                    <div>
-                      <p className="block font-sans text-base antialiased font-bold leading-relaxed text-blue-gray-900">
-                        {(book.uid || 'untitled')
-                          .split('-')
-                          .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
-                          .join(' ')}
-                      </p>
-                      <span className="inline-block bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full mt-0">
-                        Primary Level
-                      </span>
-                    </div>
                   </div>
                 </div>                {/* Description */}
                 <p className="block font-sans text-sm antialiased font-normal leading-normal text-zinc-700 opacity-75 mt-4">
