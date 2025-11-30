@@ -1,4 +1,9 @@
+'use client';
+
 import type { Content } from "@prismicio/client";
+import Book, { BookTitle, BookButton } from './ui/Book';
+import { ShoppingCart } from 'lucide-react';
+import { bookDescriptions } from '@/data/bookDescriptions';
 
 interface BookCardProps {
   // Using generic document type until Book types are generated
@@ -26,41 +31,70 @@ export function BookCard({ book }: BookCardProps) {
       .join(' ');
   };
 
+  const handlePurchase = () => {
+    // Open Amazon link in new tab
+    if (book.data.amazon_link?.url) {
+      window.open(book.data.amazon_link.url, '_blank', 'noopener,noreferrer');
+    } else {
+      // Fallback to Amazon search with book title
+      const searchQuery = encodeURIComponent(getDisplayTitle());
+      window.open(`https://amazon.com/s?k=${searchQuery}`, '_blank', 'noopener,noreferrer');
+    }
+  };
+
+  const handleBookClick = () => {
+    // Navigate to book detail page
+    window.location.href = `/books/${book.uid}`;
+  };
+
+  // Get the actual book description from our data
+  const bookData = bookDescriptions[book.uid];
+  const description = bookData?.description || `Discover the captivating world of ${getDisplayTitle()}, a story that brings together adventure, culture, and life lessons in an engaging narrative perfect for readers seeking authentic African literature.`;
+
   return (
-    <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-      <div className="aspect-[3/4] bg-gray-200 flex items-center justify-center">
-        {book.data.cover_image?.url ? (
-          <img
-            src={book.data.cover_image.url}
-            alt={book.data.cover_image.alt || ""}
-            className="w-full h-full object-cover"
-          />
-        ) : (
-          <span className="text-gray-500">Cover Image</span>
-        )}
-      </div>
-      <div className="p-4">
-        <h4 className="font-semibold text-lg mb-2 line-clamp-2">
-          {getDisplayTitle()}
-        </h4>
-        <p className="text-sm text-gray-600 mb-2">
-          by {book.data.author || 'Unknown Author'}
-        </p>
-        <p className="text-sm text-gray-500 mb-3 line-clamp-3">
-          {book.data.excerpt?.[0]?.text || 
-           book.data.description?.[0]?.text || 
-           'A compelling story from our collection of African literature.'}
-        </p>
-        <div className="flex gap-1 flex-wrap">
-          <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
-            {category}
-          </span>
-          {book.tags?.includes('Ghana') && (
-            <span className="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">
-              Ghana
-            </span>
-          )}
+    <div className="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-full max-w-sm mx-auto">
+      {/* 3D Book Image Area */}
+      <div className="relative mx-4 mt-4 overflow-visible text-gray-700 bg-gray-50 bg-clip-border rounded-xl min-h-[300px] flex items-center justify-center p-4">
+        <div onClick={handleBookClick} className="cursor-pointer">
+          <Book 
+            size="lg" 
+            className=""
+            color="blue"
+          >
+            <BookTitle className="text-white text-lg font-bold leading-tight">
+              {getDisplayTitle()}
+            </BookTitle>
+          </Book>
         </div>
+      </div>
+      
+      {/* Card Content */}
+      <div className="p-6">
+        <div className="flex items-center justify-between mb-2">
+          <p className="block font-sans text-base antialiased font-medium leading-relaxed text-blue-gray-900">
+            {category === 'primary' ? 'Primary Level' : 
+             category === 'junior-high' ? 'Junior High' : 
+             category === 'senior-high' ? 'Senior High' : 'Book'}
+          </p>
+          <div className="flex items-center gap-2">
+            <ShoppingCart size={16} className="text-blue-gray-900" />
+            <p className="block font-sans text-base antialiased font-medium leading-relaxed text-blue-gray-900">
+              Buy Now
+            </p>
+          </div>
+        </div>
+        
+        {/* Author - only show if exists and is not default */}
+        {book.data.author && book.data.author !== 'Maybridge Publishing Author' && (
+          <p className="block font-sans text-sm antialiased font-medium leading-relaxed text-gray-600 mb-2">
+            by {book.data.author}
+          </p>
+        )}
+        
+        {/* Description */}
+        <p className="block font-sans text-sm antialiased font-normal leading-normal text-gray-700 opacity-75">
+          {description}
+        </p>
       </div>
     </div>
   );

@@ -1,0 +1,359 @@
+[00:00:02.159] Server  LOG     
+[00:00:02.159] Server  LOG        We detected TypeScript in your project and created a tsconfig.json file for you.
+[00:00:02.455] Server  LOG      ✓ Ready in 1421ms
+[00:00:13.381] Server  ERROR    ⨯ ./maybridgepublishing/src/app/page.tsx:10:1
+Module not found: Can't resolve '@/components/AboutUs'
+   8 | import { BookShowcase } from "@/components/BookShowcase";
+   9 | import { EnhancedHero } from "@/components/EnhancedHero";
+> 10 | import { AboutUs } from "@/components/AboutUs";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import { Testimonials } from "@/components/Testimonials";
+  12 | import { ContactForm } from "@/components/ContactForm";
+  13 | import { Newsletter } from "@/components/Newsletter";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./maybridgepublishing/src/app/page.tsx:8:1
+Module not found: Can't resolve '@/components/BookShowcase'
+   6 | import { createClient } from "@/prismicio";
+   7 | import { components } from "@/slices";
+>  8 | import { BookShowcase } from "@/components/BookShowcase";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { EnhancedHero } from "@/components/EnhancedHero";
+  10 | import { AboutUs } from "@/components/AboutUs";
+  11 | import { Testimonials } from "@/components/Testimonials";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./maybridgepublishing/src/app/page.tsx:12:1
+Module not found: Can't resolve '@/components/ContactForm'
+  10 | import { AboutUs } from "@/components/AboutUs";
+  11 | import { Testimonials } from "@/components/Testimonials";
+> 12 | import { ContactForm } from "@/components/ContactForm";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Newsletter } from "@/components/Newsletter";
+  14 | import { EnhancedFooter } from "@/components/EnhancedFooter";
+  15 |
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./maybridgepublishing/src/app/page.tsx:14:1
+Module not found: Can't resolve '@/components/EnhancedFooter'
+  12 | import { ContactForm } from "@/components/ContactForm";
+  13 | import { Newsletter } from "@/components/Newsletter";
+> 14 | import { EnhancedFooter } from "@/components/EnhancedFooter";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | export async function generateMetadata(): Promise<Metadata> {
+  17 |   const client = createClient();
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./maybridgepublishing/src/app/page.tsx:9:1
+Module not found: Can't resolve '@/components/EnhancedHero'
+   7 | import { components } from "@/slices";
+   8 | import { BookShowcase } from "@/components/BookShowcase";
+>  9 | import { EnhancedHero } from "@/components/EnhancedHero";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { AboutUs } from "@/components/AboutUs";
+  11 | import { Testimonials } from "@/components/Testimonials";
+  12 | import { ContactForm } from "@/components/ContactForm";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./maybridgepublishing/src/app/page.tsx:13:1
+Module not found: Can't resolve '@/components/Newsletter'
+  11 | import { Testimonials } from "@/components/Testimonials";
+  12 | import { ContactForm } from "@/components/ContactForm";
+> 13 | import { Newsletter } from "@/components/Newsletter";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { EnhancedFooter } from "@/components/EnhancedFooter";
+  15 |
+  16 | export async function generateMetadata(): Promise<Metadata> {
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./maybridgepublishing/src/app/page.tsx:11:1
+Module not found: Can't resolve '@/components/Testimonials'
+   9 | import { EnhancedHero } from "@/components/EnhancedHero";
+  10 | import { AboutUs } from "@/components/AboutUs";
+> 11 | import { Testimonials } from "@/components/Testimonials";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 | import { ContactForm } from "@/components/ContactForm";
+  13 | import { Newsletter } from "@/components/Newsletter";
+  14 | import { EnhancedFooter } from "@/components/EnhancedFooter";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./maybridgepublishing/src/app/page.tsx:6:1
+Module not found: Can't resolve '@/prismicio'
+  4 | import { SliceZone } from "@prismicio/react";
+  5 |
+> 6 | import { createClient } from "@/prismicio";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { components } from "@/slices";
+  8 | import { BookShowcase } from "@/components/BookShowcase";
+  9 | import { EnhancedHero } from "@/components/EnhancedHero";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./maybridgepublishing/src/app/page.tsx:7:1
+Module not found: Can't resolve '@/slices'
+   5 |
+   6 | import { createClient } from "@/prismicio";
+>  7 | import { components } from "@/slices";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { BookShowcase } from "@/components/BookShowcase";
+   9 | import { EnhancedHero } from "@/components/EnhancedHero";
+  10 | import { AboutUs } from "@/components/AboutUs";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:14.969] Browser ERROR   uncaughtError: Error: ./maybridgepublishing/src/app/page.tsx:10:1
+Module not found: Can't resolve '@/components/AboutUs'
+   8 | import { BookShowcase } from "@/components/BookShowcase";
+   9 | import { EnhancedHero } from "@/components/EnhancedHero";
+> 10 | import { AboutUs } from "@/components/AboutUs";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import { Testimonials } from "@/components/Testimonials";
+  12 | import { ContactForm } from "@/components/ContactForm";
+  13 | import { Newsletter } from "@/components/Newsletter";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:15.176] Browser ERROR   ./maybridgepublishing/src/app/page.tsx:10:1
+Module not found: Can't resolve '@/components/AboutUs'
+   8 | import { BookShowcase } from "@/components/BookShowcase";
+   9 | import { EnhancedHero } from "@/components/EnhancedHero";
+> 10 | import { AboutUs } from "@/components/AboutUs";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import { Testimonials } from "@/components/Testimonials";
+  12 | import { ContactForm } from "@/components/ContactForm";
+  13 | import { Newsletter } from "@/components/Newsletter";
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:15.176] Browser ERROR   ./maybridgepublishing/src/app/page.tsx:8:1
+Module not found: Can't resolve '@/components/BookShowcase'
+   6 | import { createClient } from "@/prismicio";
+   7 | import { components } from "@/slices";
+>  8 | import { BookShowcase } from "@/components/BookShowcase";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { EnhancedHero } from "@/components/EnhancedHero";
+  10 | import { AboutUs } from "@/components/AboutUs";
+  11 | import { Testimonials } from "@/components/Testimonials";
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:15.176] Browser ERROR   ./maybridgepublishing/src/app/page.tsx:12:1
+Module not found: Can't resolve '@/components/ContactForm'
+  10 | import { AboutUs } from "@/components/AboutUs";
+  11 | import { Testimonials } from "@/components/Testimonials";
+> 12 | import { ContactForm } from "@/components/ContactForm";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Newsletter } from "@/components/Newsletter";
+  14 | import { EnhancedFooter } from "@/components/EnhancedFooter";
+  15 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:15.176] Browser ERROR   ./maybridgepublishing/src/app/page.tsx:14:1
+Module not found: Can't resolve '@/components/EnhancedFooter'
+  12 | import { ContactForm } from "@/components/ContactForm";
+  13 | import { Newsletter } from "@/components/Newsletter";
+> 14 | import { EnhancedFooter } from "@/components/EnhancedFooter";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | export async function generateMetadata(): Promise<Metadata> {
+  17 |   const client = createClient();
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:15.176] Browser ERROR   ./maybridgepublishing/src/app/page.tsx:9:1
+Module not found: Can't resolve '@/components/EnhancedHero'
+   7 | import { components } from "@/slices";
+   8 | import { BookShowcase } from "@/components/BookShowcase";
+>  9 | import { EnhancedHero } from "@/components/EnhancedHero";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { AboutUs } from "@/components/AboutUs";
+  11 | import { Testimonials } from "@/components/Testimonials";
+  12 | import { ContactForm } from "@/components/ContactForm";
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:15.176] Browser ERROR   ./maybridgepublishing/src/app/page.tsx:13:1
+Module not found: Can't resolve '@/components/Newsletter'
+  11 | import { Testimonials } from "@/components/Testimonials";
+  12 | import { ContactForm } from "@/components/ContactForm";
+> 13 | import { Newsletter } from "@/components/Newsletter";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { EnhancedFooter } from "@/components/EnhancedFooter";
+  15 |
+  16 | export async function generateMetadata(): Promise<Metadata> {
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:15.176] Browser ERROR   ./maybridgepublishing/src/app/page.tsx:11:1
+Module not found: Can't resolve '@/components/Testimonials'
+   9 | import { EnhancedHero } from "@/components/EnhancedHero";
+  10 | import { AboutUs } from "@/components/AboutUs";
+> 11 | import { Testimonials } from "@/components/Testimonials";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 | import { ContactForm } from "@/components/ContactForm";
+  13 | import { Newsletter } from "@/components/Newsletter";
+  14 | import { EnhancedFooter } from "@/components/EnhancedFooter";
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:15.176] Browser ERROR   ./maybridgepublishing/src/app/page.tsx:6:1
+Module not found: Can't resolve '@/prismicio'
+  4 | import { SliceZone } from "@prismicio/react";
+  5 |
+> 6 | import { createClient } from "@/prismicio";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { components } from "@/slices";
+  8 | import { BookShowcase } from "@/components/BookShowcase";
+  9 | import { EnhancedHero } from "@/components/EnhancedHero";
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:15.176] Browser ERROR   ./maybridgepublishing/src/app/page.tsx:7:1
+Module not found: Can't resolve '@/slices'
+   5 |
+   6 | import { createClient } from "@/prismicio";
+>  7 | import { components } from "@/slices";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { BookShowcase } from "@/components/BookShowcase";
+   9 | import { EnhancedHero } from "@/components/EnhancedHero";
+  10 | import { AboutUs } from "@/components/AboutUs";
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:15.418] Browser ERROR   ./maybridgepublishing/src/app/page.tsx:10:1
+Module not found: Can't resolve '@/components/AboutUs'
+   8 | import { BookShowcase } from "@/components/BookShowcase";
+   9 | import { EnhancedHero } from "@/components/EnhancedHero";
+> 10 | import { AboutUs } from "@/components/AboutUs";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import { Testimonials } from "@/components/Testimonials";
+  12 | import { ContactForm } from "@/components/ContactForm";
+  13 | import { Newsletter } from "@/components/Newsletter";
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:15.418] Browser ERROR   ./maybridgepublishing/src/app/page.tsx:8:1
+Module not found: Can't resolve '@/components/BookShowcase'
+   6 | import { createClient } from "@/prismicio";
+   7 | import { components } from "@/slices";
+>  8 | import { BookShowcase } from "@/components/BookShowcase";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { EnhancedHero } from "@/components/EnhancedHero";
+  10 | import { AboutUs } from "@/components/AboutUs";
+  11 | import { Testimonials } from "@/components/Testimonials";
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:15.418] Browser ERROR   ./maybridgepublishing/src/app/page.tsx:12:1
+Module not found: Can't resolve '@/components/ContactForm'
+  10 | import { AboutUs } from "@/components/AboutUs";
+  11 | import { Testimonials } from "@/components/Testimonials";
+> 12 | import { ContactForm } from "@/components/ContactForm";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Newsletter } from "@/components/Newsletter";
+  14 | import { EnhancedFooter } from "@/components/EnhancedFooter";
+  15 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:15.418] Browser ERROR   ./maybridgepublishing/src/app/page.tsx:14:1
+Module not found: Can't resolve '@/components/EnhancedFooter'
+  12 | import { ContactForm } from "@/components/ContactForm";
+  13 | import { Newsletter } from "@/components/Newsletter";
+> 14 | import { EnhancedFooter } from "@/components/EnhancedFooter";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | export async function generateMetadata(): Promise<Metadata> {
+  17 |   const client = createClient();
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:15.418] Browser ERROR   ./maybridgepublishing/src/app/page.tsx:9:1
+Module not found: Can't resolve '@/components/EnhancedHero'
+   7 | import { components } from "@/slices";
+   8 | import { BookShowcase } from "@/components/BookShowcase";
+>  9 | import { EnhancedHero } from "@/components/EnhancedHero";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { AboutUs } from "@/components/AboutUs";
+  11 | import { Testimonials } from "@/components/Testimonials";
+  12 | import { ContactForm } from "@/components/ContactForm";
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:15.418] Browser ERROR   ./maybridgepublishing/src/app/page.tsx:13:1
+Module not found: Can't resolve '@/components/Newsletter'
+  11 | import { Testimonials } from "@/components/Testimonials";
+  12 | import { ContactForm } from "@/components/ContactForm";
+> 13 | import { Newsletter } from "@/components/Newsletter";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { EnhancedFooter } from "@/components/EnhancedFooter";
+  15 |
+  16 | export async function generateMetadata(): Promise<Metadata> {
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:15.418] Browser ERROR   ./maybridgepublishing/src/app/page.tsx:11:1
+Module not found: Can't resolve '@/components/Testimonials'
+   9 | import { EnhancedHero } from "@/components/EnhancedHero";
+  10 | import { AboutUs } from "@/components/AboutUs";
+> 11 | import { Testimonials } from "@/components/Testimonials";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 | import { ContactForm } from "@/components/ContactForm";
+  13 | import { Newsletter } from "@/components/Newsletter";
+  14 | import { EnhancedFooter } from "@/components/EnhancedFooter";
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:15.418] Browser ERROR   ./maybridgepublishing/src/app/page.tsx:6:1
+Module not found: Can't resolve '@/prismicio'
+  4 | import { SliceZone } from "@prismicio/react";
+  5 |
+> 6 | import { createClient } from "@/prismicio";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { components } from "@/slices";
+  8 | import { BookShowcase } from "@/components/BookShowcase";
+  9 | import { EnhancedHero } from "@/components/EnhancedHero";
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:15.418] Browser ERROR   ./maybridgepublishing/src/app/page.tsx:7:1
+Module not found: Can't resolve '@/slices'
+   5 |
+   6 | import { createClient } from "@/prismicio";
+>  7 | import { components } from "@/slices";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { BookShowcase } from "@/components/BookShowcase";
+   9 | import { EnhancedHero } from "@/components/EnhancedHero";
+  10 | import { AboutUs } from "@/components/AboutUs";
+
+https://nextjs.org/docs/messages/module-not-found

@@ -54,6 +54,21 @@ async function Header() {
                 </PrismicNextLink>
               </li>
             ))}
+            <li className="font-semibold tracking-tight text-slate-800">
+              <a href="/#primary-books" className="hover:text-blue-600 transition-colors">
+                Primary Books
+              </a>
+            </li>
+            <li className="font-semibold tracking-tight text-slate-800">
+              <a href="/#junior-high-books" className="hover:text-blue-600 transition-colors">
+                Junior High
+              </a>
+            </li>
+            <li className="font-semibold tracking-tight text-slate-800">
+              <a href="/#senior-high-books" className="hover:text-blue-600 transition-colors">
+                Senior High
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
