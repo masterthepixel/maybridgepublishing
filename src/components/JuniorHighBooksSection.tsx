@@ -79,13 +79,6 @@ export async function JuniorHighBooksSection() {
                   </div>
                 </div>
                 
-                {/* Author - only show if exists and is not default */}
-                {book.data.author && book.data.author !== 'Maybridge Publishing Author' && (
-                  <p className="block font-sans text-sm antialiased font-medium leading-relaxed text-gray-600 mb-2">
-                    by {book.data.author}
-                  </p>
-                )}
-                
                 {/* Description */}
                 <p className="block font-sans text-sm antialiased font-normal leading-normal text-gray-700 opacity-75">
                   {bookDescriptions[book.uid || '']?.description || `Discover the captivating world of ${(book.uid || 'this book')
