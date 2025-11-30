@@ -71,14 +71,16 @@ export function BookCard({ book }: BookCardProps) {
       {/* Card Content */}
       <div className="p-6">
         <div className="flex items-center justify-between mb-2">
-          <p className="block font-sans text-base antialiased font-medium leading-relaxed text-blue-gray-900">
+          <p className="block font-sans text-base antialiased font-bold leading-relaxed text-blue-gray-900">
             {category === 'primary' ? 'Primary Level' : 
              category === 'junior-high' ? 'Junior High' : 
              category === 'senior-high' ? 'Senior High' : 'Book'}
           </p>
           <div className="flex items-center gap-2">
-            <ShoppingCart size={16} className="text-blue-gray-900" />
-            <p className="block font-sans text-base antialiased font-medium leading-relaxed text-blue-gray-900">
+            <div className="bg-green-500 p-1.5 rounded-full">
+              <ShoppingCart size={14} className="text-white" />
+            </div>
+            <p className="block font-sans text-base antialiased font-medium leading-relaxed text-blue-600">
               Buy Now
             </p>
           </div>
