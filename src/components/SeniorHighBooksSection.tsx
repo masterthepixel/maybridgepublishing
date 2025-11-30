@@ -42,14 +42,14 @@ export async function SeniorHighBooksSection() {
               <div className="relative mx-4 mt-4 overflow-visible text-gray-700 bg-gradient-to-t from-white via-green-200/40 to-green-600/40 bg-clip-border rounded-xl min-h-[300px] flex items-center justify-center p-4" style={{
                 background: 'linear-gradient(to top, #ffffff, rgba(187, 247, 208, 0.4), rgba(22, 163, 74, 0.4))'
               }}>
-                <div onClick={() => window.location.href = `/books/${book.uid}`} className="cursor-pointer">
+                <div onClick={() => window.location.href = `/books/${book.uid || 'untitled'}`} className="cursor-pointer">
                   <Book 
                     size="lg" 
                     className=""
                     color="blue"
                   >
                     <BookTitle className="text-white text-lg font-bold leading-tight">
-                      {book.uid
+                      {(book.uid || 'untitled')
                         .split('-')
                         .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
                         .join(' ')}
@@ -83,7 +83,7 @@ export async function SeniorHighBooksSection() {
                 
                 {/* Description */}
                 <p className="block font-sans text-sm antialiased font-normal leading-normal text-gray-700 opacity-75">
-                  {bookDescriptions[book.uid]?.description || `Discover the captivating world of ${book.uid
+                  {bookDescriptions[book.uid || '']?.description || `Discover the captivating world of ${(book.uid || 'this book')
                     .split('-')
                     .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
                     .join(' ')}, a story that brings together adventure, culture, and life lessons in an engaging narrative perfect for readers seeking authentic African literature.`}
